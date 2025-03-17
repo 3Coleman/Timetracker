@@ -9,7 +9,7 @@ import time
 
 # Set Chrome options (if you want to run Chrome in headless mode, uncomment the next line)
 chrome_options = Options()
-# chrome_options.add_argument("--headless")  # Uncomment if you want to run headless mode
+chrome_options.add_argument("--headless")  # Uncomment if you want to run headless mode
 
 # Set the path to ChromeDriver
 service = Service(executable_path="chromedriver.exe")  # Specify the full path to your chromedriver.exe

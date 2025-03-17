@@ -5,17 +5,18 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import chromedriver_binary
 import time
 
 # Set Chrome options (if you want to run Chrome in headless mode, uncomment the next line)
 chrome_options = Options()
-chrome_options.add_argument("--headless")  # Uncomment if you want to run headless mode
+chrome_options.add_argument("--headless") # Uncomment if you want to run headless mode
 
 # Set the path to ChromeDriver
 service = Service(executable_path="chromedriver.exe")  # Specify the full path to your chromedriver.exe
 
 # Initialize the WebDriver
-driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 
 # Navigate to the project tracker page
 driver.get("http://project-tracker.intel.com/#/home")

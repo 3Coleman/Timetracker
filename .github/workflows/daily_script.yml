@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         # If 'requirements.txt' is in the root directory, this will work.
         # Otherwise, provide the correct relative path to it.
-        #pip install -r requirements.txt  # Ensure you have your dependencies listed in requirements.txt
+        pip install -r requirements.txt  # Ensure you have your dependencies listed in requirements.txt
 
     - name: Run the script
       run: python ./tracker_aut.py  # Replace with the actual path to your script (if not in the root directory)

@@ -24,4 +24,4 @@ jobs:
         pip install -r requirements.txt  # Ensure you have your dependencies listed in requirements.txt
 
     - name: Run the script
-      run: python /path/to/your/script.py  # Replace with the actual path to your script
+      run: python ./tracker_aut.py # Replace with the actual path to your script

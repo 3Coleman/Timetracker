@@ -27,10 +27,9 @@ jobs:
 
     - name: Install ChromeDriver
       run: |
-        python -m pip install chromedriver-binary
-        # This ensures that the appropriate chromedriver is downloaded and set up in the PATH.
+        sudo apt install -y chromium-driver  # Install chromium driver which is compatible with Ubuntu
 
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # Ensure you have your dependencies listed in requirements.txt

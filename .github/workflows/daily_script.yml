@@ -25,14 +25,12 @@ jobs:
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
-    - name: Install ChromeDriver
+    - name: Install dependencies and ChromeDriver
       run: |
         sudo apt install -y chromium-driver  # Install chromium driver which is compatible with Ubuntu
-
-    - name: Install Python dependencies
-      run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # Ensure you have your dependencies listed in requirements.txt
+        python -m pip install chromedriver-binary  # Install the chromedriver-binary package
 
     - name: Verify Selenium Installation
       run: |
